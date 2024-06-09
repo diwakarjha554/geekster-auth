@@ -6,6 +6,7 @@ import Section from "../ui/Section";
 import { useCallback } from "react";
 import { ThemeColorToggle } from "../ui/theme-color-toggle";
 import { ThemeModeToggle } from "../ui/theme-mode-toggle";
+import { AlignJustify } from "lucide-react";
 
 
 
@@ -34,8 +35,11 @@ const Header = () => {
                 <div
                     className={`flex items-center gap-3`}
                 >
-                    <ThemeColorToggle />
-                    <ThemeModeToggle />
+                    <AlignJustify className="md:hidden"/> 
+                    <div className="hidden md:flex gap-3">
+                        <ThemeColorToggle />
+                        <ThemeModeToggle />
+                    </div>
                 </div>
 
             </Container>

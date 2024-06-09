@@ -18,11 +18,11 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: "Geekster",
+    default: "Geekster Auth",
     template: "%s",
   },
   description:
-    "Crafting unforgettable travel experiences. We take care of the details, so you can focus on making memories.",
+    "Geekster Auth is a authentication website.",
   icons: {
     icon: "/icon.png",
   },

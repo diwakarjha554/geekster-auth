@@ -9,7 +9,7 @@ const Login = async () => {
   if(session?.user) redirect('/dashboard');
 
   return (
-    <div className="shadow-md border-[1px] max-w-[600px] rounded p-5">
+    <div className="shadow-md border-[1px] max-w-[600px] w-full rounded p-5">
       <h1 className="text-2xl font-[500] text-primary">Login</h1>
       <LoginForm />
     </div>

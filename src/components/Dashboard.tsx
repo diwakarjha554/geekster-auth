@@ -14,10 +14,10 @@ const Dashboard = async () => {
     <Section className="mt-20">
       <Container>
         <h1 className="text-4xl font-[500]">Dashboard</h1>
-        <form action={logoutAction}>
+        <form action={logoutAction} className="mt-5">
           <button
             type="submit"
-            className="bg-primary p-2 rounded text-white"
+            className="bg-primary p-2 rounded text-white dark:text-gray-900"
           >
             Logout
           </button>

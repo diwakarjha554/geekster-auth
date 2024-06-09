@@ -31,7 +31,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="shadow-md border-[1px] max-w-[600px] rounded p-5">
+    <div className="shadow-md border-[1px] max-w-[600px] w-full rounded p-5">
       <h1 className="text-2xl font-[500]">SignUp</h1>
       <form 
       action={signUp} 
@@ -39,7 +39,7 @@ const Signup = () => {
         <input type="text" className="bg-transparent border-[1px] px-1 py-1 rounded" placeholder="Name" name="name"/>
         <input type="email" className="bg-transparent border-[1px] px-1 py-1 rounded" placeholder="Email Id" name="email"/>
         <input type="password" className="bg-transparent border-[1px] px-1 py-1 rounded" placeholder="Password" name="password"/>
-        <button type="submit" className="bg-primary text-white hover:bg-primary/70 py-1 rounded cursor-pointer font-[500]">SignUp</button>
+        <button type="submit" className="bg-primary text-white dark:text-gray-900 hover:bg-primary/70 py-1 rounded cursor-pointer font-[500]">SignUp</button>
         <p className="text-xs">Don't have an account? <Link href="/" className="text-primary font-[500] cursor-pointer">login</Link></p>
       </form>
     </div>

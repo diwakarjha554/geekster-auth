@@ -40,7 +40,7 @@ const LoginForm = () => {
             className="flex flex-col gap-3 mt-5">
             <input type="email" name="email" className="bg-transparent border-[1px] px-1 py-1 rounded" placeholder="Email Id" />
             <input type="password" name="password" className="bg-transparent border-[1px] px-1 py-1 rounded" placeholder="Password" />
-            <button type="submit" className="bg-primary hover:bg-primary/70 py-1 rounded cursor-pointer font-[500]">LogIn</button>
+            <button type="submit" className="text-white dark:text-gray-900 bg-primary hover:bg-primary/70 py-1 rounded cursor-pointer font-[500]">LogIn</button>
             <p className="text-xs">Don't have an account? <span onClick={handleSignupRedirect} className="text-primary font-[500] cursor-pointer">signup</span></p>
         </form>
     )
