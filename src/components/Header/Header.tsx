@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import Container from "../ui/Container";
 import Section from "../ui/Section";
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 import { ThemeColorToggle } from "../ui/theme-color-toggle";
 import { ThemeModeToggle } from "../ui/theme-mode-toggle";
 import { AlignJustify } from "lucide-react";
@@ -16,6 +16,11 @@ const Header = () => {
     const handleLogoRoute = useCallback(() => {
         router.push('/');
     }, [router]);
+
+    const [isOpen, setIsOpen] = useState(false);
+    const handleMenu = () => {
+        setIsOpen(!isOpen);
+    };
 
     return (
         <Section
@@ -35,12 +40,19 @@ const Header = () => {
                 <div
                     className={`flex items-center gap-3`}
                 >
-                    <AlignJustify className="md:hidden"/> 
+                    <AlignJustify className="md:hidden relative" onClick={handleMenu}/> 
                     <div className="hidden md:flex gap-3">
                         <ThemeColorToggle />
                         <ThemeModeToggle />
                     </div>
                 </div>
+
+                {isOpen && (
+                    <div className="bg-secondary z-50 absolute right-4 top-12 sm:hidden rounded flex p-2 gap-2 shadow-md">
+                        <ThemeColorToggle />
+                        <ThemeModeToggle />
+                    </div>
+                )}
 
             </Container>
         </Section>
